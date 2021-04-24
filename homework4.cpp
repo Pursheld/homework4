@@ -2,28 +2,21 @@
 
 int main()
 {
+    
     const int size = 2;
-    const int srange = 4;
-    int array[size][srange];
+    int array[size][size] = { {1,2},{5,3} };
     for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < srange; j++)
+        
+        for (int j = 0 ; j < size; j++)
         {
-
-            array[i][j] = i + j;
-
-        }
-
-    }
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = 0; j < srange; j++)
-        {
-
+            array[i][j] += array[j][i];
+            
             std::cout << array[i][j];
+            std::cout << " ";
 
         }
-        std::cout << '\n';
+        std::cout << std::endl;
     }
 
 }

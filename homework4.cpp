@@ -17,16 +17,7 @@ int main()
     tm* ltm = localtime(&now);
     int day = ltm->tm_mday;
 
-    for (int i = 0; i < N; i++)
-    {
-
-        index = day % N;
-        sum += arr[i][index];
-
-
-    }
-    cout << sum ;
-    std::cout << std::endl;
+   
 
     for (int i = 0; i < size; i++)
     {
@@ -41,5 +32,14 @@ int main()
         }
         std::cout << std::endl;
     }
+    for (int i = 0; i < N; i++)
+    {
 
+        index = day % N;
+        sum += arr[i][index];
+
+
+    }
+    cout << sum;
+    std::cout << std::endl;
 }
